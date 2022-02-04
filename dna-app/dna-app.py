@@ -9,9 +9,9 @@ from PIL import Image # 이미지 처리 라이브러리 / 이미지 불러올�
 #맨 위 상단에 이미지 삽입
 # image = Image.open('https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png')
 
-# st.image('https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png')
+st.image('https://drive.google.com/file/d/1vCdI8oJd_UNEJ50-qLc26w4HzNAg3U8k/view?usp=sharing', use_column_width=True)
 
-st.markdown("[![dna-logo](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)")
+# st.markdown("[![dna-logo](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)")
 
 # 글 쓰기 
 st.write("""
