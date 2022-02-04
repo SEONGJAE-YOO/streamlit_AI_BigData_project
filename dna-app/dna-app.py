@@ -7,7 +7,7 @@ import altair as alt # Altair는 Vega 및 Vega-Lite에 기반한 Python용 선�
 from PIL import Image # 이미지 처리 라이브러리 / 이미지 불러올때 사용함
 
 #맨 위 상단에 이미지 삽입
-image = Image.open('dna-logo.png')
+image = Image.open('https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png')
 
 st.image(image, use_column_width=True)
 
