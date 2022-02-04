@@ -1,17 +1,74 @@
 from email.mime import image
+import imp
 import pandas as pd
 import streamlit as st
 
 # https://partrita.github.io/posts/altair/ 참고 - Altair로 시각화하기
 import altair as alt # Altair는 Vega 및 Vega-Lite에 기반한 Python용 선언적 통계 시각화 라이브러리입니다
 from PIL import Image # 이미지 처리 라이브러리 / 이미지 불러올때 사용함
+import base64
+
 
 #맨 위 상단에 이미지 삽입
 # image = Image.open('https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png')
 
-st.image('https://drive.google.com/file/d/1vCdI8oJd_UNEJ50-qLc26w4HzNAg3U8k/view?usp=sharing', use_column_width=True)
+# st.image('https://drive.google.com/file/d/1vCdI8oJd_UNEJ50-qLc26w4HzNAg3U8k/view?usp=sharing')
 
-# st.markdown("[![dna-logo](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)")
+#  image_url = os.path.join(DATA_URL_ROOT, selected_frame)
+#  image = load_image(image_url)
+
+# st.markdown("[![dna-logo](https://drive.google.com/file/d/1vCdI8oJd_UNEJ50-qLc26w4HzNAg3U8k/view?usp=sharing)](https://drive.google.com/file/d/1vCdI8oJd_UNEJ50-qLc26w4HzNAg3U8k/view?usp=sharing)")
+
+# #centered
+# st.markdown(
+#     """<a style='display: block; text-align: center;' href="https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png">dnalogo</a>
+#     """,
+#     unsafe_allow_html=True,
+# )
+
+# image = """
+
+# ![https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png](https://github.com/SEONGJAE-YOO/streamlit_AI_BigData_project/blob/main/dna-app/dna-logo.png)
+
+# """
+
+# st.markdown(image)
+
+# 위에 소스는 시행착오 한 내용입니다. 시행착오 후 밑에 소스가 이미지가 잘 나타났습니다.
+
+LOGO_IMAGE = "dna-logo.png"
+
+st.markdown(
+    """
+    <style>
+    .container {
+        display: flex;
+    }
+    .logo-text {
+        font-weight:700 !important;
+        font-size:50px !important;
+        color: #f9a01b !important;
+        padding-top: 75px !important;
+    }
+    .logo-img {
+        float:right;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <div class="container">
+        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
+        <p class="logo-text">dna-logo</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 # 글 쓰기 
 st.write("""
