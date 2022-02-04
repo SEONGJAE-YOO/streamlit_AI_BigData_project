@@ -3,4 +3,3 @@ pandas==0.25.3
 numpy==1.18.1
 altair==4.2.0
 Pillow==8.3.1
-numpy-base==1.20.3    
