@@ -36,7 +36,7 @@ import base64
 
 # 위에 소스는 시행착오 한 내용입니다. 시행착오 후 밑에 소스가 이미지가 잘 나타났습니다.
 
-LOGO_IMAGE = "./dna-logo.png"
+LOGO_IMAGE = "dna-logo.png"
 
 st.markdown(
     """
